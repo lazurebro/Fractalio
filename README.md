@@ -1,0 +1,2 @@
+The program was created as part of a college project: "Fractals. Geometry of Beauty".
+Due to the very tight deadlines, the code organization is at the level of an early prototype, and only two fractal generation algorithms are available (Mandelbrot set and Newton fractal)
