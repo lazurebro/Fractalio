@@ -1,0 +1,33 @@
+en-EN
+
+##############
+# MANAGEMENT #
+##############
+
+Ctrl + Left mouse button - Move along the fractal
+Ctrl + Shift + S - Save fractal image
+
+###########
+# FORMULAS #
+###########
+
++, -, *, / - standard mathematical symbols
+**, pow(num, power) - squaring
+Example: 2**3 = 8; pow(2, 3) = 8
+
+Formulas can contain trigonometric functions (cos, sin, tan, etc.) and complex numbers (complex(real, imag))
+Example:
+	1) Trigonometric formulas:
+	 sin(Z**2) + C
+ 	 cos(Z**2) + C
+	2) Complex numbers
+	 Z**complex(2,0) + C
+	 Z**complex(3,1) + C
+
+Using 'Use custom formulas' in Newton's fractal, you will have to calculate the derivative of the formula yourself
+For example:
+	formula: Z**3 - 1
+	formula prime: 3*Z**3
+
+	formula: Z**8 + Z**5 - Z**3 - 1
+	formula prime: 8*Z**7 + 5*Z**4 - 3*Z**2
