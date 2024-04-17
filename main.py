@@ -11,6 +11,11 @@ import numpy
 import random
 import threading
 
+import locale
+import ctypes
+windll = ctypes.windll.kernel32
+GLang = locale.windows_locale[ windll.GetUserDefaultUILanguage() ]
+
 import mandelbrot
 import mandelbrot_framework
 
@@ -145,7 +150,12 @@ class App(Tk):
 		main_menu = Menu()
 		main_menu.add_cascade(label="Fractal", menu=fractal_menu)
 		#main_menu.add_cascade(label="Edit")
-		main_menu.add_cascade(label="Help")
+		def open_help():
+			global GLang
+			if os.system("help-"+GLang+".txt")!=0:
+				os.system("help-en_US.txt")
+
+		main_menu.add_command(label="Help", command=open_help)
 		self.config(menu=main_menu)
 
 	def __init__(self):
@@ -164,7 +174,7 @@ class App(Tk):
 
 		self.create_main_menu()
 
-		self.SetupWorkspace("Newton-Raphson")
+		self.SetupWorkspace("Mandelbrot")
 
 if __name__ == '__main__':
 	app = App()
